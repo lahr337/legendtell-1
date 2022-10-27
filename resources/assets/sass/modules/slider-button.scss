@@ -1,0 +1,44 @@
+.slider-button {
+    padding: 0;
+    border-radius: 50%;
+    background: rgba($bg--general, .7);
+    border: none;
+    cursor: pointer;
+    transition: $transition--general;
+
+    svg {
+        position: absolute;
+        @include push--center-middle;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover {
+        background: $bg--general;
+    }
+}
+
+.slider-button--accent {
+    background: $bg--accent;
+
+    svg path {
+        stroke: $text--light;
+    }
+
+    &:hover {
+        background: darken($bg--accent, 10%);
+    }
+}
+
+.slider-button--md {
+    width: 3rem;
+    height: 3rem;
+}
+
+.slider-button--xl {
+    width: 4rem;
+    height: 4rem;
+}

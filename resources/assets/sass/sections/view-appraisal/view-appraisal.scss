@@ -1,0 +1,158 @@
+.view-appraisal {
+    &__car-name {
+        margin-top: 3rem;
+    }
+
+    &__content-wrapper {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 47rem auto 37rem;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 0 3rem;
+    }
+
+    &__vin, &__appraisal-val {
+        padding-bottom: 2rem;
+    }
+
+    &__vin {
+        grid-column: 1/2;
+    }
+
+    &__appraisal-val {
+        grid-column: 2/4;
+    }
+
+    // Sliders
+    &__slider-wrapper, &__general-info {
+        grid-row: 2/3;
+    }
+
+    &__slider-wrapper {
+        position: relative;
+        width: 470px;
+    }
+
+    &__general-slider {
+        position: relative;
+        aspect-ratio: 5/3;
+    }
+
+    &__thumbs-slider {
+        margin-top: 1rem;
+    }
+    // End sliders
+
+    &__condition {
+        grid-row: 2/4;
+        align-self: flex-start;
+    }
+
+    &__features-wr {
+        padding-top: 4rem;
+        grid-row: 3/4;
+        grid-column: 1/3;
+        max-width: 50rem;
+    }
+}
+
+@include media-1399 {
+    .view-appraisal {
+        &__content-wrapper {
+            grid-template-columns: 47rem auto 32.5rem;
+            grid-gap: 0 2rem;
+        }
+    }
+}
+
+@include media-1199 {
+    .view-appraisal {
+        &__content-wrapper {
+            grid-template-columns: 47rem auto;
+            grid-gap: 2rem;
+        }
+
+        &__vin, &__appraisal-val {
+            padding-bottom: 0;
+        }
+
+        &__appraisal-val {
+            grid-column: 2/3;
+        }
+
+        &__condition {
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+
+        &__features-wr {
+            grid-column: 2/3;
+            padding-top: 0;
+        }
+    }
+}
+
+@include media-991 {
+    .view-appraisal {
+        &__content-wrapper {
+            grid-template-columns: 40rem auto;
+        }
+
+        &__slider-wrapper {
+            width: 40rem;
+        }
+
+        &__condition {
+            grid-column: 1/3;
+        }
+
+        &__features-wr {
+            grid-column: 1/3;
+            grid-row: 4/5;
+            max-width: 100%;
+        }
+    }
+}
+
+@include media-767 {
+    .view-appraisal {
+        &__content-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3rem;
+        }
+
+        &__slider-wrapper {
+            grid-column: 1/3;
+            width: 100%;
+        }
+
+        &__general-info {
+            grid-column: 1/3;
+            grid-row: 3/4;
+        }
+
+        &__condition {
+            grid-row: 4/5;
+        }
+
+        &__features-wr {
+            grid-row: 5/6;
+        }
+    }
+}
+
+@include media-575 {
+    .view-appraisal {
+        &__content-wrapper {
+            display: block;
+        }
+
+        &__appraisal-val {
+            margin-top: 0.5rem;
+        }
+
+        &__slider-wrapper, &__general-info, &__condition, &__features-wr {
+            margin-top: 2rem;
+        }
+    }
+}

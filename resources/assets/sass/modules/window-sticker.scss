@@ -1,0 +1,15 @@
+.window-sticker {
+    text-align: right;
+
+    &__title {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: $text--primaryAccent;
+    }
+
+    &__picture-wr {
+        margin-top: 0.5rem;
+        display: block;
+    }
+}

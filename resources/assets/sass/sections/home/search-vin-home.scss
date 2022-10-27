@@ -1,0 +1,63 @@
+.search-vin-home {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &__search-side {
+        position: relative;
+        flex-basis: 570px;
+        flex-shrink: 0;
+        padding-top: 9rem;
+        z-index: z('content');
+    }
+
+    &__image-side {
+        flex-basis: calc(100% - 655px);
+        flex-shrink: 0;
+        height: 100%;
+    }
+}
+
+@include media-1199 {
+    .search-vin-home {
+        &__image-side {
+            position: absolute;
+            top: -8rem;
+            right: 39rem;
+            z-index: z('beelow');
+        }
+    }
+}
+
+@include media-991 {
+    .search-vin-home {
+        &__search-side {
+            padding-top: 6rem;
+        }
+
+        &__image-side {
+            top: -8rem;
+            right: 30rem;
+        }
+    }
+}
+
+@include media-767 {
+    .search-vin-home {
+        &__search-side {
+            padding-top: 4rem;
+        }
+
+        &__image-side {
+            top: -11rem;
+            right: 40rem;
+            opacity: .1;
+        }
+    }
+}
+
+@include media-575 {
+    .search-vin-home {
+        display: block;
+    }
+}

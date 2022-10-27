@@ -1,0 +1,217 @@
+$input__bg--default: #F7F7F7;
+
+.custom-input {
+    width: 100%;
+
+    &__field {
+        width: 100%;
+        border: none;
+        background: $input__bg--default;
+        outline: none;
+
+        @include placeholder {
+            color: #8E8E8E;
+        }
+
+        &--number::-webkit-outer-spin-button, &--number::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        -moz-appearance: textfield;
+    }
+
+    // &__field--password {
+    //     font-size: 3rem;
+    //     line-height: 1.4rem;
+    // }
+}
+
+.custom-input--default {
+    .custom-input {
+        &__field {
+            padding: 1.7rem 2rem;
+            border-radius: 6px;
+        }
+    }
+}
+
+.custom-input--white-bg {
+    .custom-input {
+        &__field {
+            background: $bg--general;
+        }
+    }
+}
+
+.custom-input--dark {
+    .custom-input {
+        &__field {
+            background: $bg--secondary;
+        }
+    }
+}
+
+.custom-input--disabled {
+    .custom-input {
+        &__field {
+            opacity: .6;
+        }
+
+        &__logged-another {
+            margin-top: 1rem;
+            width: 100%;
+        }
+    }
+}
+
+.custom-input--with-label-above {
+    .custom-input {
+        &__label {
+            font-weight: 600;
+            color: $text--pitchDark;
+        }
+    
+        &__field-wr {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.custom-input__fields-combo {
+    .custom-input {
+        &__field-wr {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: .6rem;
+        }
+    }
+}
+
+.custom-input--half {
+    .custom-input {
+        &__field-wr {
+            width: 50%;
+        }
+    }
+}
+
+.custom-input--sm {
+    .custom-input {
+        &__field {
+            padding: 1.1rem 1.5rem;
+            border-radius: .6rem;
+        }
+    }
+}
+
+.custom-input--xs {
+    .custom-input {
+        &__field {
+            padding: 0.7rem;
+            border-radius: .4rem;
+        }
+    }
+}
+
+.custom-input--s {
+    .custom-input {
+        &__field {
+            padding: .7rem 1.5rem;
+            border-radius: .4rem;
+        }
+    }
+}
+
+.custom-input--xxxl {
+    .custom-input {
+        &__field {
+            border-radius: 8px;
+            padding: 2.5rem;
+        }
+    }
+}
+
+.custom-input--with-btn {
+    display: flex;
+
+    .custom-input {
+        &__field-wr {
+            flex-grow: 1;
+        }
+
+        &__field {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &__btn {
+            background: $bg--accent;
+            border: none;
+            font-weight: 600;
+            color: $text--light;
+            cursor: pointer;
+            padding: 0 4.4rem;
+            border-radius: 0px 8px 8px 0px;
+            transition: $transition--general;
+
+            &:hover {
+                background: darken($bg--accent, 10%);
+            }
+        }
+    }
+}
+
+.custom-input--password {
+    .custom-input {
+        &__field-wr {
+            position: relative;
+        }
+
+        &__eye-btn {
+            position: absolute;
+            @include push--middle;
+            right: 2rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: transparent;
+            width: 2rem;
+            height: 2rem;
+            padding: 0;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@include media-767 {
+    .custom-input--xxxl {
+        .custom-input {
+            &__field {
+                padding: 2.2rem;
+            }
+        }
+    }
+}
+
+@include media-575 {
+    .custom-input--with-btn {
+        .custom-input {
+            &__btn {
+                padding: 0 2rem;
+            }
+        }
+    }
+
+    .custom-input--xxxl {
+        .custom-input {
+            &__field {
+                padding: 1.7rem;
+            }
+        }
+    }
+}

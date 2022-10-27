@@ -1,0 +1,24 @@
+.logged-another {
+    display: flex;
+    align-items: flex-start;
+    background: $bg--secondary;
+    border: 1px solid #DBDBDB;
+    border-radius: .6rem;
+    padding: 1rem 3rem 1rem 1rem;
+
+    &__icon-wr {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        margin-left: 0.5rem;
+        width: calc(100% - 2rem);
+        line-height: 140%;
+    }
+}

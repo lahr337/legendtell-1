@@ -1,0 +1,24 @@
+.dashboard-next-location {
+    display: flex;
+    flex-direction: column;
+
+    span:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    span:not(.dashboard-next-location__name):not(.dashboard-next-location__number) {
+        font-weight: 500;
+    }
+
+    &__name, &__number {
+        font-weight: 600;
+    }
+}
+
+.dashboard-next-location--lg {
+    font-size: 1.4rem;
+}
+
+.dashboard-next-location--sm {
+    font-size: 1.2rem;
+}

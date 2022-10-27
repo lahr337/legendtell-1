@@ -1,0 +1,15 @@
+@import "utils/main";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+
+@import "./general-modules/custom-input.scss";
+@import "./modules/sign-email.scss";
+@import "./modules/account-choose-line.scss";
+@import "./modules/social-sign-btn.scss";
+@import "./modules/sign-social.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/create-your-account/create-your-account.scss";

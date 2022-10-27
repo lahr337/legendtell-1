@@ -1,0 +1,15 @@
+@import "utils/main";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+@import "./general-modules/custom-input.scss";
+@import "./general-modules/block-heading.scss";
+
+@import "./modules/not-car-yeat.scss";
+@import "./modules/car-adding.scss";
+@import "./modules/added-car-item.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/add-car/add-car.scss";

@@ -1,0 +1,34 @@
+.appraisal-checks {
+    display: grid;
+    grid-template-columns: auto 2rem 7rem 18.2rem;
+    grid-gap: .5rem 5rem;
+    padding-left: 3rem;
+    border-left: 1px solid #F5F5F5;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    &__heading-item {
+        text-transform: uppercase;
+    }
+
+    // &__item {
+    //     .custom-check {
+    //         margin: auto;
+    //         width: 1.5rem;
+    //         height: 1.5rem;
+    //     }
+    // }
+
+    &__check-wr {
+        margin: auto;
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@include media-1199 {
+    .appraisal-checks {
+        padding-left: 0;
+        border-left: none;
+    }
+}

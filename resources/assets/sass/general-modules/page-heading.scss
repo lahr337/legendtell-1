@@ -1,0 +1,69 @@
+$page-heading__titleColor: $text--general;
+$page-heading__titleColor--accent: $text--primaryAccent;
+
+.page-heading {
+    &__title {
+        font-weight: 600;
+        font-size: 4.2rem;
+        // line-height: 86%;
+        color: $page-heading__titleColor;
+
+        span {
+            color: $page-heading__titleColor--accent;
+        }
+    }
+
+    &__desc {
+        margin-top: 1.2rem;
+        font-weight: 600;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.page-heading--centered {
+    text-align: center;
+}
+
+.page-heading--with-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .page-heading {
+        &__btns {
+            // display: grid;
+            grid-template-columns: 17.7rem 17.7rem;
+            text-align: center;
+            grid-gap: 1rem;
+            
+            .btn {
+                line-height: 2.4rem;
+            }
+        }
+    }
+}
+
+@include media-991 {
+    .page-heading {
+        &__title {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+@include media-767 {
+    .page-heading--with-buttons {
+        display: block;
+    }
+}
+
+@include media-575 {
+    .page-heading {
+        &__title {
+            font-size: 3rem;
+        }
+    }
+}

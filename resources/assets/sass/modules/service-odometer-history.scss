@@ -1,0 +1,9 @@
+.service-odometer-history {
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #F5F5F5;
+    }
+}

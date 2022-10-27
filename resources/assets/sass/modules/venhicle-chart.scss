@@ -1,0 +1,81 @@
+.venhicle-chart {
+    padding: 2rem 6rem 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Heading
+    &__heading {
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+    }
+
+    &__heding-icon-wr {
+        width: 5rem;
+        // aspect-ratio: 1/1;
+        height: 5rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__heading-title {
+        margin-left: 1.5rem;
+        font-weight: 600;
+        font-size: 3.2rem;
+    }
+    // End heading
+
+    &__chart {
+        margin-top: 4.5rem;
+        height: 23rem;
+        width: 38rem;
+    }
+
+    &__info {
+        margin-top: 1rem;
+    }
+
+    &__data-log-btn {
+        margin-top: 2rem;
+        width: 27rem;
+    }
+}
+
+@include media-991 {
+    .venhicle-chart {
+        &__heding-icon-wr {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &__heading-title {
+            margin-left: 1rem;
+            font-size: 2.2rem;
+        }
+
+        &__chart {
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+@include media-575 {
+    .venhicle-chart {
+        padding: 2rem;
+
+        &__chart {
+            // width: 28rem;
+            width: 100%;
+            aspect-ratio: 3/2;
+            height: auto;
+        }
+
+        &__data-log-btn {
+            width: 23rem;
+        }
+    }
+}

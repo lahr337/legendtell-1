@@ -1,0 +1,14 @@
+@import "utils/main";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+@import "./general-modules/block-heading.scss";
+@import "./general-modules/list.scss";
+
+@import "./modules/car-general-slider.scss";
+@import "./modules/car-thambs-slider.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/shop-page/shop-page.scss";

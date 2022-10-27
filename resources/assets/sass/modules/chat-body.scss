@@ -1,0 +1,27 @@
+.chat-body {
+    padding: 2rem 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__date {
+        margin: 1.5rem 0;
+        align-self: center;
+        border-radius: .3rem;
+        background: $bg--secondary;
+        padding: 0.6rem 1.2rem;
+        font-size: 1.2rem;
+        color: #C9C9C9;
+    }
+
+    &__messages {
+        margin: 1.2rem 0;
+    }
+}

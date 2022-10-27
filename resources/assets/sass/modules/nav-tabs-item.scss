@@ -1,0 +1,109 @@
+.nav-tabs-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 2.2rem 2rem;
+    @include df-transition;
+    background: $bg--secondary;
+    border-radius: .4rem;
+    cursor: pointer;
+    border: none;
+    transition: $transition--general;
+
+    &__icon-wr {
+        svg path, &__name {
+            @include df-transition;
+        }
+    
+        svg path {
+            fill: $text--primaryAccent;
+        }
+    }
+
+    &__name {
+        margin-left: 1rem;
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: $text--pitchDark;
+        white-space: nowrap;
+    }
+
+    &__arrow {
+        position: absolute;
+        @include push--middle;
+        right: 2rem;
+    }
+}
+
+.nav-tabs-item:hover {
+    background: rgba($bg--accent, .3);
+}
+
+.nav-tabs-item--active {
+    background: $bg--accent;
+
+    svg path {
+        fill: $text--light;
+    }
+
+    .nav-tabs-item {
+        &__name {
+            color: $text--light;
+        }
+    }
+
+    &:hover {
+        background: $bg--accent;
+        color: $text--general;
+    }
+}
+
+@include media-1199 {
+    .nav-tabs-item {
+        &__name {
+            display: none;
+        }
+    }
+
+    .nav-tabs-item--choose-help {
+        .nav-tabs-item {
+            &__name {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@include media-991 {
+    .nav-tabs-item--choose-help {
+        padding: 1.5rem 1rem;
+
+        .nav-tabs-item {
+            &__arrow {
+                display: none;
+            }
+
+            &__name {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}
+
+@include media-575 {
+    .nav-tabs-item {
+        padding: 1rem 1.5rem;
+        justify-content: flex-end;
+        border-radius: 0 .4rem .4rem 0;
+        transform: translateX(-1rem);
+        // box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+
+        &--active {
+            transform: translateX(0);
+        }
+    }
+
+    .nav-tabs-item--choose-help {
+        border-radius: .4rem;
+    }
+}

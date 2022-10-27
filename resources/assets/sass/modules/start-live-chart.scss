@@ -1,0 +1,25 @@
+.start-live-chart {
+    text-align: center;
+
+    &__btn {
+        margin-top: 2rem;
+        display: block;
+        width: 100%;
+    }
+}
+
+@include media-1199 {
+    .start-live-chart {
+        &__desc {
+            display: none;
+        }
+    }
+}
+
+@include media-991 {
+    .start-live-chart {
+        &__btn:hover {
+            background: $bg--general;
+        }
+    }
+}

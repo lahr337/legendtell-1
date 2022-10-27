@@ -1,0 +1,21 @@
+.general-history {
+    overflow: hidden;
+
+    &__content {
+        margin: 3rem auto 0 auto;
+        // width: calc(100% - 52rem);
+        width: calc(100% - 15rem);
+    }
+}
+
+@include media-575 {
+    .general-history {
+        &__header {
+            margin-top: 2rem;
+        }
+
+        &__content {
+            width: 100%;
+        }
+    }
+}

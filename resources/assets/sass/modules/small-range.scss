@@ -1,0 +1,30 @@
+.small-range {
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+    }
+
+    &__name {
+        color: $text--primaryAccent;
+    }
+
+    &__visual {
+        position: relative;
+        margin-top: 1rem;
+        height: 0.3rem;
+        width: 100%;
+        background: #C4C4C4;
+        border-radius: 1.7rem;
+        overflow: hidden;
+    }
+
+    &__visual-accent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: $bg--accent;
+        border-radius: 1.7rem;
+    }
+}

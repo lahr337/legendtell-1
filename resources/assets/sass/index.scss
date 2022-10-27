@@ -1,0 +1,35 @@
+@import "utils/main";
+@import "~custom-select/src/css/custom-select.css";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+
+@import "./general-modules/custom-radio.scss";
+@import "./general-modules/custom-input.scss";
+@import "./general-modules/custom-check.scss";
+@import './general-modules/list.scss';
+// main section (search by vin)
+@import "./modules/main-car-img.scss";
+@import "./modules/search-by-year.scss";
+@import "./modules/search-by-vin.scss";
+// Seach by vin
+@import "./modules/preferences-block.scss";
+// Check vin
+@import "./modules/advantages-block.scss";
+
+@import "./modules/show-place-item.scss";
+@import "./modules/search-vin-visual.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/home/search-vin-home.scss";
+@import "./sections/home/check-vin.scss";
+@import "./sections/home/find-vin.scss";
+
+// ----- Found Css
+// Modules---------------
+@import "./modules/result-card.scss";
+// Sections------------------
+@import "./sections/found/search-vin-found.scss";
+@import "./sections/found/results.scss";

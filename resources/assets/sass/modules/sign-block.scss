@@ -1,0 +1,40 @@
+$signBlock__linkColor: $text--pitchDark;
+$signBlock__linkColor--hover: $text--primaryAccent;
+$signBlock__itemMargin: 1.2rem;
+
+.sign-block {
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+
+        &:first-child {
+            margin-right: $signBlock__itemMargin;
+        }
+
+        &:last-child {
+            margin-left: $signBlock__itemMargin;
+        }
+
+        // line
+        &:last-child::before {
+            @include pseudo;
+            @include push--middle;
+            left: - $signBlock__itemMargin;
+            height: 1.2rem;
+            width: 1px;
+            background: $signBlock__linkColor;
+        }
+    }
+
+    &__link {
+        color: $signBlock__linkColor;
+        font-size: 1.4rem;
+    }
+
+    &__link:hover {
+        color: $signBlock__linkColor--hover;
+    }
+}

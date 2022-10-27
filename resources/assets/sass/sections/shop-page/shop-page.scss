@@ -1,0 +1,156 @@
+.shop-page {
+    &__wr {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 47rem auto 19rem;
+        grid-gap: 7rem 3rem;
+    }
+
+    &__general-slider-inner {
+        aspect-ratio: 7/4;
+    }
+
+    &__thumbs-slider {
+        margin-top: 1rem;
+    }
+
+    &__desc {
+        max-width: 37rem;
+        line-height: 140%;
+    }
+
+    &__services {
+        max-width: 37rem;
+    }
+
+    &__services-list {
+        margin-top: 1.5rem;
+        column-count: 2;
+    }
+
+    &__contacts-and-partners {
+        grid-row: 1/4;
+        grid-column: 3/4;
+    }
+
+    &__contacts {
+        background: $bg--secondary;
+        border-radius: .6rem;
+        padding: 2.8rem 1.5rem 2.8rem 2rem;
+    }
+
+    &__contact-items {
+        margin-top: 1rem;
+    }
+
+    &__contact-item {
+        display: inline-block;
+        color: $text--general;
+    }
+
+    &__partners {
+        margin-top: 4rem;
+    }
+
+    &__partner-item {
+        margin-top: 2rem;
+        display: block;
+    }
+
+    &__partner-img {
+        width: 100%;
+    }
+
+    &__map-wr {
+        margin-top: 2rem;
+        width: 57rem;
+        // height: 27rem;
+        aspect-ratio: 2/1;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@include media-1199 {
+    .shop-page {
+        &__wr {
+            grid-template-columns: 47rem 19rem;
+            grid-gap: 4rem 3rem;
+        }
+
+        &__content {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        &__contacts-and-partners {
+            grid-column: 2/3;
+        }
+    }
+}
+
+@include media-991 {
+    .shop-page {
+        &__wr {
+            grid-template-columns: 45rem 19rem;
+        }
+    }
+}
+
+@include media-767 {
+    .shop-page {
+        &__wr {
+            display: block;
+        }
+
+        &__content, &__contacts-and-partners, &__location {
+            margin-top: 2rem;
+        }
+
+        &__contacts-and-partners {
+            display: flex;
+        }
+
+        &__contacts {
+            width: 22rem;
+        }
+
+        &__partners {
+            margin-top: 1rem;
+            width: 26rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__partner-item {
+            margin: .5rem;
+            aspect-ratio: 3/1;
+            width: 12rem;
+        }
+
+        &__map-wr {
+            width: 100%;
+        }
+    }
+}
+
+@include media-575 {
+    .shop-page {
+        &__contacts-and-partners {
+            display: block;
+        }
+
+        &__contacts {
+            margin: auto;
+        }
+
+        &__partners {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.account-avatar {
+    cursor: pointer;
+
+    &__field {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &__edit-icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 3rem;
+        height: 3rem;
+        background: $bg--accent;
+        border-radius: 50%;
+        @include df-transition;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    &__photo-wr {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+.account-avatar:hover {
+    .account-avatar {
+        &__edit-icon {
+            background: darken($bg--accent, 10%);
+        }
+    }
+}

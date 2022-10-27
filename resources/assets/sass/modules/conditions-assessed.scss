@@ -1,0 +1,46 @@
+.conditions-assessed {
+    background: $bg--secondary;
+    padding: 2rem 1.5rem 4rem;
+    border-radius: 8px;
+
+    &__list {
+        margin-top: 3rem;
+    }
+
+    &__item:not(:first-child) {
+        margin-top: 2.4rem;
+    }
+
+    &__report {
+        width: 100%;
+        margin-top: 3.7rem;
+    }
+}
+
+@include media-1199 {
+    .conditions-assessed {
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+        }
+
+        &__item:not(:first-child) {
+            margin-top: 0;
+        }
+    }
+}
+
+@include media-575 {
+    .conditions-assessed {
+        padding-bottom: 2rem;
+
+        &__title {
+            text-align: center;
+        }
+
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+}

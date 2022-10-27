@@ -1,0 +1,29 @@
+.report-table {
+    border-collapse: collapse;
+
+    th:first-child {
+        text-align: left;
+    }
+
+    th:last-child {
+        text-align: right;
+    }
+
+    td {
+        padding: 1rem 0;
+    }
+
+    td, td a {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $text--pitchDark;
+    }
+
+    tbody tr:not(:first-child) td {
+        border-top: 1px solid #DBDBDB;
+    }
+
+    tbody tr td:last-child {
+        text-align: right;
+    }
+}

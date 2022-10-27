@@ -1,0 +1,80 @@
+.dashboard-since-item {
+    background: $bg--secondary;
+    border-radius: .6rem;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+
+    &__range-items {
+        margin-top: 2rem;
+        max-width: 27rem;
+    }
+
+    &__range-item:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    &__action {
+        margin-top: 2rem;
+    }
+
+    &__action-name {
+        font-weight: 600;
+    }
+
+    &__action-details {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__action-duration {
+        font-weight: 500;
+    }
+
+    &__edit-link {
+        margin-left: 2rem;
+        text-decoration: underline;
+    }
+
+    &__footer {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__already-register {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &__add-registration {
+        margin-top: 1rem;
+        width: calc(100% - 5rem);
+    }
+
+    &__last-reg-link {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $text--general;
+        transition: $transition--general;
+
+        svg {
+            margin-left: 0.5rem;
+
+            path {
+                transition: $transition--general;
+            }
+        }
+
+        &:hover {
+            color: $text--primaryAccent;
+
+            svg path {
+                stroke: $text--primaryAccent;
+            }
+        }
+    }
+}

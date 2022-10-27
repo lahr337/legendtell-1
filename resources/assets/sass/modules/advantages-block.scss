@@ -1,0 +1,42 @@
+.advantages-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3.6rem;
+    padding: 3.5rem;
+    background: $bg--general;
+    box-shadow: 0px 0px 31px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+
+    &__item {
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__item-title {
+        margin-top: 10px;
+    }
+
+    &__item-desc {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@include media-767 {
+    .advantages-block {
+        padding: 2.5rem 2rem;
+        grid-gap: 1.5rem;
+    }
+}
+
+@include media-575 {
+    .advantages-block {
+        grid-template-columns: 1fr;
+
+        &__item {
+            text-align: center;
+        }
+    }
+}

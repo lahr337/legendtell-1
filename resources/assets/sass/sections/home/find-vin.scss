@@ -1,0 +1,36 @@
+.home-find-vin {
+    display: flex;
+    padding-bottom: 10rem;
+
+    &__content-side {
+        flex: 0 0 470px;
+    }
+
+    &__visual-side {
+        flex: 0 0 685px;
+        position: relative;
+    }
+
+    &__list {
+        margin-top: 2rem;
+    }
+}
+
+@include media-1199 {
+    .home-find-vin {
+        display: block;
+
+        &__visual-side {
+            margin-top: 4rem;
+        }
+    }
+}
+
+@include media-767 {
+    .home-find-vin {
+        &__visual-side {
+            width: 30rem;
+            margin: 4.5rem auto 0 auto;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.page {
+    padding: 5rem 0 10rem 0;
+}
+
+@include media-767 {
+    .page {
+        padding: 3rem 0 7rem 0;
+    }
+}

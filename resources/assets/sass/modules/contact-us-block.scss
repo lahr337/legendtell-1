@@ -1,0 +1,15 @@
+.contact-us-block {
+    background: $bg--secondary;
+    border-radius: .6rem;
+    padding: 3rem 2rem;
+    text-align: center;
+
+    &__desc {
+        margin-top: 2rem;
+    }
+
+    &__btn {
+        margin-top: 3rem;
+        display: block;
+    }
+}

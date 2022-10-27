@@ -1,0 +1,20 @@
+@import "utils/main";
+@import "~custom-select/src/css/custom-select.css";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+@import "./general-modules/custom-check.scss";
+@import "./general-modules/custom-input.scss";
+@import "./general-modules/custom-radio.scss";
+
+@import "./modules/reports-car.scss";
+@import "./modules/plan-item.scss";
+@import "./modules/plan-label.scss";
+
+@import "./modules/payment-method.scss";
+@import "./modules/methods-of-payment.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/reports-payment/reports-payment.scss";

@@ -1,0 +1,16 @@
+.odometer-history-item {
+    padding: 1rem 0 1.5rem 0;
+    border-bottom: 1px solid #F5F5F5;
+    display: flex;
+    justify-content: space-between;
+
+    &__date-and-salon {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__salon {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+}

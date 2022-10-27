@@ -1,0 +1,4 @@
+@include font-face('Gilroy', '/assets/fonts/Gilroy/Gilroy-Regular/Gilroy-Regular', $weight: 400, $style: normal, $asset-pipeline: false );
+@include font-face('Gilroy', '/assets/fonts/Gilroy/Gilroy-Medium/Gilroy-Medium', $weight: 500, $style: normal, $asset-pipeline: false );
+@include font-face('Gilroy', '/assets/fonts/Gilroy/Gilroy-SemiBold/Gilroy-SemiBold', $weight: 600, $style: normal, $asset-pipeline: false );
+@include font-face('Gilroy', '/assets/fonts/Gilroy/Gilroy-Bold/Gilroy-Bold', $weight: 700, $style: normal, $asset-pipeline: false );

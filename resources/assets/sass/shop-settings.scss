@@ -1,0 +1,26 @@
+@import "utils/main";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+@import "./general-modules/custom-input.scss";
+@import "./general-modules/block-heading.scss";
+@import "./general-modules/custom-check.scss";
+
+@import "./modules/nav-tabs-item.scss";
+@import "./modules/nav-tabs.scss";
+@import "./modules/account-avatar.scss";
+@import "./modules/reports-available.scss";
+@import "./modules/vehicle-history-item.scss";
+@import "./modules/vin.scss";
+@import "./modules/credit-cards.scss";
+@import "./modules/changes-saved.scss";
+@import "./modules/logged-another.scss";
+@import "./modules/methods-of-payment.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/shop-settings/settings-form.scss";
+@import "./sections/shop-settings/shop-settings.scss";
+@import "./sections/shop-settings/payment-methods.scss";
+@import "./sections/shop-settings/manage-notifications.scss";

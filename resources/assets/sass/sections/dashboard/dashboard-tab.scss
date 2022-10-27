@@ -1,0 +1,80 @@
+.dashboard-tab {
+    display: flex;
+    justify-content: space-between;
+
+    &__asside {
+        flex: 0 0 30rem;
+        padding-right: 3rem;
+        padding-bottom: 2rem;
+        border-right: 1px solid #F5F5F5;
+    }
+
+    &__general {
+        flex: 0 0 calc(100% - 40rem);
+        display: none;
+    }
+
+    &__asside-tabs {
+        margin-top: 1rem;
+    }
+
+    &__get-help {
+        margin-top: 2rem;
+    }
+
+    &__tab-name {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    &__items {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+        align-items: flex-start;
+    }
+
+    &__general--active {
+        display: block;
+    }
+}
+
+@include media-1199 {
+    .dashboard-tab {
+        &__general {
+            margin-left: 3rem;
+            flex-basis: auto;
+        }
+
+        &__items {
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+            justify-items: center;
+        }
+
+        &__next-item, &__since-item {
+            width: 100%;
+        }
+    }
+}
+
+@include media-767 {
+    .dashboard-tab {
+        display: block;
+
+        &__asside {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        &__general {
+            margin-left: 0;
+        }
+
+        &__items {
+            margin: 2rem auto 0 auto;
+            width: 30rem;
+        }
+    }
+}

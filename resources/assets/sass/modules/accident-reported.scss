@@ -1,0 +1,27 @@
+.accident-reported {
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &__content-wr {
+        margin-left: 1rem;
+        padding-bottom: 2.2rem;
+        width: 220px;
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $text--pitchDark;
+    }
+
+    &__stage {
+        margin-top: 1.3rem;
+        position: relative;
+        width: 100%;
+    }
+}

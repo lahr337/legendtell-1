@@ -1,0 +1,152 @@
+.vehicle-history-item {
+    font-size: 1rem;
+    background: $bg--secondary;
+    padding: 1.5rem 7rem 1.5rem 1.5rem;
+    border-radius: .6rem;
+
+    &__inner {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    // Heading
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #DEDEDE;
+    }
+
+    &__title-wr {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+    }
+
+    &__title {
+        margin-left: 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    &__heading-controls {
+        display: grid;
+        grid-template-columns: 1.5rem 1.5rem;
+        grid-gap: 1.5rem;
+    }
+
+    &__heading-control {
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        svg path {
+            transition: $transition--general;
+        }
+
+        &:hover {
+            svg path {
+                fill: $text--general;
+            }
+        }
+    }
+    // End heading
+
+    // Content
+    &__content {
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__img-wr {
+        display: block;
+        width: 8.3rem;
+        // height: 6rem;
+        aspect-ratio: 4/3;
+        border-radius: .4rem;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+        margin-left: 1.5rem;
+    }
+
+    &__info-item:not(:first-child) {
+        margin-top: 1rem;
+    }
+    // End content
+
+    &__link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.7rem;
+        height: 100%;
+        
+        svg path {
+            transition: $transition--general;
+        }
+
+        &:hover {
+            svg path {
+                stroke: $text--pitchDark;
+            }
+        }
+    }
+}
+
+@include media-575 {
+    .vehicle-history-item {
+        padding: 1rem;
+
+        &__inner {
+            font-size: 1.2rem;
+        }
+
+        &__content {
+            flex-direction: column;
+        }
+
+        &__img-wr {
+            width: 10rem;
+        }
+
+        &__info {
+            margin-left: 0;
+            margin-top: 1.5rem;
+        }
+
+        &__info-item:not(:first-child) {
+            margin-top: 0.5rem;
+        }
+
+        &__link {
+            width: 100%;
+            height: calc(100% - 4rem);
+            top: 4rem;
+
+            svg {
+                position: absolute;
+                right: 1.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

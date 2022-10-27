@@ -1,0 +1,46 @@
+.appraised-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title, &__price {
+        font-weight: 600;
+        font-size: 3.2rem;
+    }
+
+    &__title {
+        color: $text--primaryAccent;
+    }
+
+    &__price {
+        margin-top: 1.5rem;
+        color: $text--pitchDark;
+    }
+
+    &__btn {
+        margin-top: 2rem;
+        font-weight: 400;
+    }
+
+    &__get-link {
+        margin-top: 2.4rem;
+        color: $text--pitchDark;
+    }
+}
+
+@include media-767 {
+    .appraised-value {
+        &__title {
+            font-size: 2.2rem;
+        }
+
+        &__price {
+            margin-top: 1rem;
+            font-size: 2.2rem;
+        }
+
+        &__get-link {
+            margin-top: 1.4rem;
+        }
+    }
+}

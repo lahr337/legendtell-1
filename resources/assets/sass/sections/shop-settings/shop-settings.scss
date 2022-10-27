@@ -1,0 +1,150 @@
+.account-settings {
+    &__btns {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    &__btns--active {
+        opacity: 1;
+        visibility: visible;
+        display: grid;
+    }
+
+    &__grid {
+        margin-top: 5rem;
+        display: flex;
+        // display: grid;
+        // grid-template-columns: 27rem auto;
+        justify-content: space-between;
+    }
+
+    &__nav-wr {
+        width: 27rem;
+    }
+
+    &__content-wr {
+        width: calc(100% - 27rem);
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__content {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    &__content--active {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+
+    &__content-form {
+        margin-right: auto;
+        margin-left: 13rem;
+        width: 60rem;
+    }
+
+    &__content-history-wr {
+        margin-right: auto;
+        margin-left: 3rem;
+    }
+
+    &__history {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem 3rem;
+    }
+
+    &__history-item {
+        position: relative;
+    }
+
+    &__content-notifications {
+        margin-right: auto; margin-left: 13rem;
+        width: 49rem;
+    }
+}
+
+@include media-1199 {
+    .account-settings {
+        &__grid {
+            margin-top: 3rem;
+        }
+
+        &__nav-wr {
+            width: 5.5rem;
+        }
+
+        &__content-wr {
+            width: calc(100% - 8rem);
+        }
+    }
+}
+
+@include media-991 {
+    .account-settings {
+        &__history {
+            grid-template-columns: 1fr;
+        }
+
+        &__content-wr {
+            justify-content: center;
+        }
+
+        &__content-form {
+            margin-left: auto;
+            max-width: 45rem;
+        }
+    }
+}
+
+@include media-767 {
+    .account-settings {
+        &__content-notifications {
+            margin-left: 0;
+        }
+    }
+}
+
+@include media-575 {
+    .account-settings {
+        &__heading {
+            padding-left: 5rem;
+            text-align: center;
+        }
+
+        &__nav-wr {
+            position: fixed;
+            left: 0;
+            top: 20rem;
+        }
+
+        &__content-wr {
+            width: 100%;
+            padding-left: 5rem;
+        }
+
+        &__content-form {
+            max-width: 100%;
+        }
+
+        &__content-history-wr {
+            margin-left: 0;
+            width: 100%;
+            max-width: 24rem;
+            margin: auto;
+        }
+
+        &__btns {
+            grid-template-columns: 1fr !important;
+            max-width: 23rem;
+            margin: 2rem auto 0 auto;
+            padding-left: 5rem;
+            font-size: 1.2rem;
+        }
+    }
+}

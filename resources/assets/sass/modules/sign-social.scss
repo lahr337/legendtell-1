@@ -1,0 +1,9 @@
+.sign-social {
+    &__btn:not(:first-child) {
+        margin-top: 1.5rem;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+}

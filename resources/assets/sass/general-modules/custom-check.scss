@@ -1,0 +1,144 @@
+.custom-check {
+    &__field-wr {
+        position: relative;
+    }
+
+    &__field {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0;
+        outline: none;
+        z-index: z('content');
+        cursor: pointer;
+    }
+
+    &__customize {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: .4rem;
+        border: 1px solid $bg--accent;
+        transition: $transition--general;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            opacity: 0;
+            transition: $transition--general;
+        }
+    }
+
+    &__field:checked + .custom-check__customize {
+        background: $bg--accent;
+
+        svg {
+            opacity: 1;
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+    }
+}
+
+.custom-check--with-label {
+    display: flex;
+    align-items: center;
+
+    .custom-check {
+        &__label {
+            margin-left: 0.5rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.custom-check--media {
+    width: 2.7rem;
+    height: 2.7rem;
+
+    .custom-check {
+        &__customize {
+            background: $bg--general;
+            width: 2.7rem;
+            height: 2.7rem;
+            border-color: $bg--general;
+        }
+
+        &__field:checked + .custom-check__customize {
+            background: $bg--general;
+    
+            svg {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.custom-check--md {
+    .custom-check {
+        &__field-wr {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        &__customize {
+            svg {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+}
+
+.custom-check--xl {
+    .custom-check {
+        &__field-wr {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &__customize {
+            svg {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    }
+}
+
+.custom-check--with-label-xl {
+    display: flex;
+    // flex-direction: row-reverse;
+    align-items: center;
+
+    .custom-check {
+        &__field-wr {
+            margin-left: 2.3rem;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &__label {
+            font-weight: 600;
+        }
+    }
+}
+
+.custom-check--xxl {
+    .custom-check {
+        &__field-wr {
+            width: 2.3rem;
+            height: 2.3rem;
+        }
+
+        &__customize {
+            border-width: .2rem;
+        }
+    }
+}

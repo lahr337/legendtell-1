@@ -1,0 +1,41 @@
+.condition-assessed-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 3rem;
+        // aspect-ratio: 1/1;
+        height: 3rem;
+    }
+
+    &__progress-bar {
+        margin: 0 2rem;
+    }
+
+    &__value {
+        color: $text--accentGreen;
+        font-weight: 600;
+    }
+}
+
+.condition-assessed-item--with-bg {
+    background: $bg--secondary;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+}
+
+@include media-1199 {
+    .condition-assessed-item--appraisal {
+        .condition-assessed-item {
+            &__progress-bar {
+                margin: 0 1rem;
+            }
+
+            svg {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+}

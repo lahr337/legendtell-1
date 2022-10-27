@@ -1,0 +1,40 @@
+.network-shops {
+    &__items {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3rem;
+    }
+}
+
+@include media-1199 {
+    .network-shops {
+        &__items {
+            margin-top: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+        }
+    }
+}
+
+@include media-991 {
+    .network-shops {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include media-575 {
+    .network-shops {
+        &__page-heading {
+            text-align: center;
+        }
+
+        &__items {
+            margin: 2rem auto 0 auto;
+            max-width: 30rem;
+            grid-template-columns: 1fr;
+        }
+    }
+}

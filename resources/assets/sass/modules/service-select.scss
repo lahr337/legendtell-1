@@ -1,0 +1,64 @@
+.service-select {
+    &__label {
+        font-weight: 600;
+    }
+
+    &__inner {
+        margin-top: 1rem;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.1rem 1.5rem;
+        background: $bg--secondary;
+        transition: $transition--general;
+        border-radius: .6rem;
+        color: #8E8E8E;
+        cursor: pointer;
+    }
+
+    &__select-list {
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: $bg--general;
+        border-radius: 0 0 .6rem .6rem;
+        border: 1px solid #F5F5F5;
+        position: absolute;
+        z-index: z('content');
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition--general;
+    }
+
+    &__select-inner {
+        padding: 1.5rem 2.5rem 1.5rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 1rem 2rem;
+    }
+
+    &--active {
+        .service-select {
+            &__heading {
+                border-radius: .6rem .6rem 0 0;
+            }
+
+            &__select-list {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    // End active
+}
+
+@include media-767 {
+    .service-select {
+        &__select-inner {
+            grid-template-columns: 1fr;
+        }
+    }
+}

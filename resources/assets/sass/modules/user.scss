@@ -1,0 +1,24 @@
+.user {
+    position: relative;
+
+    &__info {
+        position: relative;
+    }
+
+    &__nav {
+        position: absolute;
+        top: calc(100% + .6rem);
+        left: 0;
+        width: 100%;
+    }
+}
+
+@include media-767 {
+    .user {
+        &__nav {
+            position: relative;
+            top: 0;
+            margin-top: 2rem;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.service-history {
+    display: grid;
+    grid-template-columns: 30rem 47rem;
+    grid-gap: 10rem;
+
+    &__asside {
+        padding-right: 3rem;
+    }
+
+    &__title {
+        font-size: 1.4rem;
+    }
+
+    &__items-wr {
+        margin-top: 1.5rem;
+    }
+
+    &__item:not(:first-child) {
+        margin-top: 2rem;
+    }
+}
+
+@include media-1199 {
+    .service-history {
+        grid-gap: 3rem;
+    }
+}
+
+@include media-991 {
+    .service-history {
+        grid-template-columns: 1fr;
+
+        &__asside {
+            padding-right: 0;
+        }
+    }
+}

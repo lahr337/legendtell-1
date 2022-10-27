@@ -1,0 +1,129 @@
+.faq {
+    &__grid {
+        margin-top: 3.5rem;
+        display: grid;
+        grid-template-columns: 1fr 2.1fr 1fr;
+        grid-gap: 3rem;
+    }
+
+    &__toggle:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    &__toggles-group {
+        display: none;
+    }
+
+    &__toggles-group--active {
+        display: block;
+    }
+
+    &__start-live-chart {
+        margin-top: 3rem;
+    }
+
+    &__chat {
+        position: fixed;
+        bottom: 20rem;
+        left: 50%;
+        transform: translateX(calc(-50% + 44.9rem));
+        z-index: z('modal');
+    }
+}
+
+@include media-1399 {
+    .faq {
+        &__chat {
+            transform: translateX(calc(-50% + 40rem));
+        }
+    }
+}
+
+@include media-1199 {
+    .faq {
+        &__grid {
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr;
+        }
+
+        &__questions-type {
+            grid-row: 1/2;
+        }
+
+        &__toggles {
+            grid-row: 1/3;
+        }
+
+        &__start-live-chart {
+            position: fixed;
+            margin-top: 0;
+            left: 50%;
+            bottom: 10rem;
+            transform: translateX(calc(-50% + 33rem));
+            width: 20rem;
+            z-index: z('content');
+        }
+
+        &__chat {
+            bottom: 10rem;
+            transform: translateX(calc(-50% + 30rem));
+        }
+    }
+}
+
+@include media-991 {
+    .faq {
+        &__grid {
+            display: block;
+        }
+
+        &__toggles {
+            margin-top: 2rem;
+        }
+
+        &__contacts-and-chat {
+            margin: 2rem auto 0 auto;
+            max-width: 30rem;
+        }
+
+        &__start-live-chart {
+            transform: translateX(calc(-50% + 23.5rem));
+        }
+
+        &__chat {
+            transform: translateX(calc(-50% + 20rem));
+        }
+
+        &__questions-type {
+            position: relative;
+        }
+    }
+}
+
+@include media-767 {
+    .faq {
+        &__start-live-chart {
+            transform: translateX(calc(-50% + 15rem));
+        }
+
+        &__chat {
+            transform: translateX(calc(-50% + 12rem));
+        }
+    }
+}
+
+@include media-575 {
+    .faq {
+        &__start-live-chart {
+            left: auto;
+            right: 6.5rem;
+            bottom: 2rem;
+        }
+
+        &__chat {
+            left: auto;
+            right: 0;
+            bottom: 2rem;
+        }
+    }
+}

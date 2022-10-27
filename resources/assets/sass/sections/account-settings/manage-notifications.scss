@@ -1,0 +1,43 @@
+.manage-notifications {
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__turn-all {
+        flex-direction: row-reverse;
+
+        .custom-check__label {
+            margin-left: 0;
+        }
+    }
+
+    &__items-wr {
+        margin-top: 2.5rem;
+    }
+
+    &__item {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        &:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+
+        .custom-check__label {
+            margin-left: 0;
+        }
+    }
+}
+
+@include media-575 {
+    .manage-notifications {
+        &__heading {
+            display: block;
+        }
+
+        &__turn-all {
+            margin-top: 2rem;
+        }
+    }
+}

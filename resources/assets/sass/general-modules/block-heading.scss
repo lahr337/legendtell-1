@@ -1,0 +1,65 @@
+.block-heading {
+    &__title {
+        font-weight: 600;
+        font-size: 2.4rem;
+    }
+
+    &__desc {
+        margin-top: 1rem;
+        font-weight: 600;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.block-heading--centered {
+    text-align: center;
+}
+
+.block-heading--with-icon {
+    display: flex;
+    align-items: center;
+
+    & > svg {
+        width: 3rem;
+        // aspect-ratio: 1/1;
+        height: 3rem;
+    }
+
+    .block-heading {
+        &__title {
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+@include media-991 {
+    .block-heading {
+        &__title {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+@include media-575 {
+    .block-heading {
+        &__title {
+            font-size: 2rem;
+        }
+    }
+
+    .block-heading--with-icon {
+        & > svg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .block-heading {
+            &__title {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}

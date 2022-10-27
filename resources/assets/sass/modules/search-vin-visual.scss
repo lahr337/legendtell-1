@@ -1,0 +1,60 @@
+.search-vin-visual {
+    &__places {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__show-place-item {
+        position: absolute;
+
+        &--front-end, &--door {
+            top: -1.2rem;
+        }
+
+        &--front-end {
+            left: 17rem;
+        }
+
+        &--door {
+            left: 31.5rem;
+        }
+
+        &--under-hood, &--interior {
+            bottom: -0.9rem;
+        }
+
+        &--under-hood {
+            left: 8.4rem;
+        }
+
+        &--interior {
+            left: 21.6rem;
+        }
+    }
+    // End items
+}
+
+@include media-767 {
+    .search-vin-visual {
+        &__show-place-item {
+            &--front-end {
+                left: 0;
+            }
+
+            &--door {
+                left: 12rem;
+            }
+
+            &--under-hood {
+                left: 0;
+            }
+
+            &--interior {
+                left: 9rem;
+            }
+        }
+    }
+}

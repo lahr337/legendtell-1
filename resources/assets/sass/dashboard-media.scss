@@ -1,0 +1,19 @@
+@import "utils/main";
+
+$lg-path-fonts: '/assets/fonts/lg';
+$lg-path-images: '/assets/images/lg';
+@import "~lightgallery/scss/lightgallery.scss";
+@import "~lightgallery/scss/lg-zoom.scss";
+@import "~lightgallery/scss/lg-thumbnail.scss";
+
+
+// Modules---------------
+@import "utils/general-modules.scss";
+
+@import "./modules/empty-media-item.scss";
+@import "./modules/full-media-item.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/dashboard/media.scss";

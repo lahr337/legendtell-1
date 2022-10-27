@@ -1,0 +1,84 @@
+.link--dark {
+    color: $text--pitchDark;
+    transition: $transition--general;
+    font-size: 1.4rem;
+    line-height: 140%;
+
+    &:hover {
+        color: $text--primaryAccent;
+    }
+}
+
+.link--def {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        @include pseudo;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background: $text--pitchDark;
+    }
+
+    &:hover {
+        color: $text--primaryAccent;
+    }
+}
+
+.link--accent-underline {
+    position: relative;
+    display: inline-block;
+    color: $text--general;
+
+    &::before {
+        @include pseudo;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 1px;
+        background: $bg--accent;
+    }
+
+    &:hover {
+        color: $text--primaryAccent;
+    }
+}
+
+.link--with-icon {
+    display: flex;
+    align-items: center;
+
+    &::before {
+        display: none;
+    }
+    
+    svg {
+        margin: 0 1rem;
+    }
+
+    .link {
+        &__name {
+            position: relative;
+            display: inline-block;
+
+            &::before {
+                @include pseudo;
+                left: 0;
+                bottom: -2px;
+                width: 100%;
+                height: 1px;
+                background: $bg--accent;
+            }
+        }
+    }
+}
+
+.link--full-accent {
+    color: $text--primaryAccent;
+
+    &:hover {
+        color: $text--general;
+    }
+}

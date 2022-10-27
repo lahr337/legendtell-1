@@ -1,0 +1,39 @@
+.home-check-vin {
+    padding-bottom: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__side-general-info {
+        flex: 0 0 calc(100% - 700px);
+    }
+
+    &__side-advantages {
+        flex: 0 0 600px;
+    }
+}
+
+@include media-1399 {
+    .home-check-vin {
+        &__side-general-info {
+            flex: 0 0 calc(100% - 640px);
+        }
+    }
+}
+
+@include media-1199 {
+    .home-check-vin {
+        display: block;
+
+        &__side-advantages {
+            margin: 3rem auto 0 auto;
+            max-width: 60rem;
+        }
+    }
+}
+
+@include media-575 {
+    .home-check-vin {
+        padding-top: 3rem;
+    }
+}

@@ -1,0 +1,27 @@
+.create-your-account { 
+    &__heading {
+        text-align: center;
+    }
+
+    &__content-wr {
+        margin: 3.9em auto 0 auto;
+        max-width: 37rem;
+    }
+
+    &__choose-line {
+        margin-top: 2rem;
+        position: relative;
+    }
+
+    &__social {
+        margin-top: 3rem;
+    }
+}
+
+@include media-767 {
+    .create-your-account {
+        &__content-wr {
+            margin-top: 2rem;
+        }
+    }
+}

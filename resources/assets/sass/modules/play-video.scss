@@ -1,0 +1,26 @@
+.play-video {
+    background: $bg--accent;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    padding: 0;
+    transition: $transition--general;
+
+    &:hover {
+        background: darken($bg--accent, 10%);
+    }
+}
+
+.play-video--xl {
+    width: 6rem;
+    aspect-ratio: 1/1;
+}
+
+.play-video--disabled {
+    opacity: 0;
+    visibility: hidden;
+}

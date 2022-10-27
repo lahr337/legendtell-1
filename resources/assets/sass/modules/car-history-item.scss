@@ -1,0 +1,76 @@
+.car-history-item {
+    display: flex;
+    height: auto;
+
+    &__year {
+        margin-right: auto;
+        display: inline-block;
+        font-size: 1.4rem;
+        padding: 0.7em 1.4em;
+        background: $bg--accent;
+        color: $text--light;
+        border-radius: .4em;
+    }
+
+    &__list {
+        margin-left: 3.4rem;
+        padding: 1rem 2rem 1rem 1rem;
+        // border-left: 1px solid #F5F5F5;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: $text--pitchDark;
+
+        &-item:not(:first-child) {
+            margin-top: 0.5rem;
+        }
+
+        &-item--with-icon {
+            display: inline-block;
+            position: relative;
+            white-space: nowrap;
+            
+            svg {
+                position: absolute;
+                @include push--middle;
+                right: -1.8rem;
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+        }
+    }
+}
+
+.car-history-item--normal {
+    flex-direction: column;
+}
+
+.car-history-item--reverce {
+    flex-direction: column-reverse;
+}
+
+@include media-575 {
+    .car-history-item {
+        &__year {
+            margin: auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        &__list {
+            margin-top: 2rem;
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.4rem;
+        }
+
+        &__list-item:not(:first-child) {
+            margin-top: 1rem;
+        }
+    }
+
+    .car-history-item--reverce {
+        flex-direction: column;
+    }
+}

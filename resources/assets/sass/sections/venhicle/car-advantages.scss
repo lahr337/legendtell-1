@@ -1,0 +1,26 @@
+.car-advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+
+@include media-991 {
+    .car-advantages {
+        grid-gap: 1rem;
+
+        &__name {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@include media-575 {
+    .car-advantages {
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+        &__item {
+            width: 28rem;
+        }
+    }
+}

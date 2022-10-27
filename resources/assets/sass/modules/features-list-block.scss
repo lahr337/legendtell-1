@@ -1,0 +1,44 @@
+.features-list-block {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    background: $bg--general;
+    padding: 3rem 4rem;
+
+    &__list {
+        margin-top: 3rem;
+        column-count: 3;
+
+        .list__item {
+            min-height: 2rem;
+            line-height: 2rem;
+        }
+
+        .list__item:not(:first-child) {
+            margin-top: 2rem;
+        }
+    }
+}
+
+@include media-1199 {
+    .features-list-block {
+        &__list {
+            column-count: 2;
+        }
+    }
+}
+
+@include media-991 {
+    .features-list-block {
+        &__list {
+            column-count: 3;
+        }
+    }
+}
+
+@include media-575 {
+    .features-list-block {
+        &__list {
+            column-count: 1;
+        }
+    }
+}

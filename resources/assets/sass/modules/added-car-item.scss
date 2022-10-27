@@ -1,0 +1,55 @@
+.added-car-item {
+    background: $bg--secondary;
+    border-radius: .6rem;
+    padding: 1rem;
+    
+    display: flex;
+    align-items: center;
+    transition: $transition--general;
+
+    &__arrow {
+        position: absolute;
+        @include push--middle;
+        right: 2rem;
+
+        svg path {
+            transition: $transition--general;
+        }
+    }
+
+    &__img-wr {
+        width: 8rem;
+        height: 6rem;
+        border-radius: .4rem;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__name {
+        margin-left: 1.5rem;
+        max-width: 9rem;
+        color: $text--general;
+        line-height: 120%;
+        font-size: 1.4rem;
+        transition: $transition--general;
+    }
+}
+
+.added-car-item:hover {
+    background: $bg--accent;
+
+    .added-car-item {
+        &__name {
+            color: $text--light;
+        }
+
+        &__arrow svg path {
+            stroke: $text--light;
+        }
+    }
+}

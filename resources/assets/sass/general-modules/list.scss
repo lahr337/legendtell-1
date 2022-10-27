@@ -1,0 +1,105 @@
+.list {
+    &__item:not(:first-child) {
+        margin-top: 1.5rem;
+    }
+}
+
+.list--with-checks {
+    .list {
+        &__item {
+            position: relative;
+            display: block;
+            padding-left: 2.8rem;
+            min-height: 2rem;
+
+            &::before {
+                @include pseudo;
+                left: 0;
+                @include push--middle;
+                width: 2rem;
+                height: 2rem;
+                background: 50% 50%/contain no-repeat url('/assets/svg/check-in-circle.svg');
+            }
+        }
+    }
+}
+
+.list--props {
+    font-weight: 600;
+
+    .list {
+        &__item:not(:first-child) {
+            margin-top: 2.5rem;
+        }
+
+        &__item-prop, &__item-val {
+            display: inline-block;
+        }
+
+        &__item-prop {
+            color: $text--primaryAccent;
+        }
+
+        &__item-val {
+            margin-left: 1.5rem;
+            color: $text--general;
+
+            a {
+                color: $text--general;
+                text-decoration: underline;
+                transition: $transition--general;
+
+                &:hover {
+                    color: $text--primaryAccent;
+                }
+            }
+            // End link
+        }
+    }
+}
+
+.list--inline-elements {
+    display: flex;
+    align-items: center;
+
+    .list {
+        &__item {
+            margin-top: 0;
+            font-size: 1.2rem;
+            padding: 0 1.6em;
+
+            &:first-child {
+                border-right: 1px solid #BDBDBD;
+            }
+        }
+    }
+}
+
+.list--props-sm-margins {
+    .list {
+        &__item:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+// .list--disc {
+//     list-style-type: disc;
+//     padding-left: 1rem;
+
+//     .list {
+//         &__item {
+//             list-style-type: disc;
+//         }
+//     }
+// }
+
+@include media-991 {
+    .list--props {
+        .list {
+            &__item:not(:first-child) {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

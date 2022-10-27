@@ -1,0 +1,155 @@
+.credit-cards {
+    border-radius: .8rem;
+    box-shadow: 0px 0px 31px rgb(0 0 0 / 4%);
+    
+    // Heading
+    &__heading {
+        padding: 1.8rem 3rem;
+        background: $bg--secondary;
+        border-radius: .8rem .8rem 0 0;
+        display: flex;
+    }
+
+    &__heading-method {
+        flex-basis: 33rem;
+    }
+
+    &__heading-item {
+        font-weight: 600;
+    }
+    // End heading
+
+    // Cards
+    &__cards-list {
+        padding: 1.8rem 3rem 3rem;
+    }
+
+    &__card-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:not(:first-child) {
+            margin-top: 2rem;
+        }
+    }
+
+    &__icon-wr {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__last-symbols {
+        margin-left: 1.5rem;
+        width: 29rem;
+    }
+
+    &__expired {
+        margin-right: auto;
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 12rem);
+        grid-gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+    // End cards
+}
+
+@include media-991 {
+    .credit-cards {
+        &__cards-list {
+            padding: 1.5rem 1.5rem 2rem;
+        }
+        
+        &__card-item {
+            flex-wrap: wrap;
+
+            &:not(:last-child) {
+                border-bottom: .1rem solid $bg--secondary;
+                padding-bottom: 1rem;
+            }
+        }
+
+        &__heading {
+            justify-content: space-between;
+            padding: 1.5rem;
+        }
+
+        &__heading-method {
+            flex-basis: auto;
+        }
+
+        &__heading-expired {
+            flex-basis: 7rem;
+            text-align: center;
+        }
+
+        &__last-symbols {
+            width: auto;
+        }
+
+        &__expired {
+            margin-left: auto;
+            margin-right: 0;
+            flex-basis: 7rem;
+            display: block;
+            text-align: center;
+        }
+
+        &__buttons {
+            margin-top: 1rem;
+            flex-basis: 100%;
+        }
+    }
+}
+
+@include media-575 {
+    .credit-cards {
+        &__card-item {
+            justify-content: center;
+        }
+
+        &__heading {
+            display: none;
+        }
+
+        &__last-symbols {
+            margin-left: 0.5rem;
+            max-width: calc(100% - 3rem);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__expired {
+            margin-top: 1rem;
+            flex-basis: 100%;
+        }
+
+        &__buttons {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            grid-template-columns: 1fr;
+        }
+
+        &__btn-wr:first-child {
+            grid-row: 2/3;
+        }
+
+        &__btn-wr:last-child {
+            grid-row: 1/2;
+        }
+    }
+}

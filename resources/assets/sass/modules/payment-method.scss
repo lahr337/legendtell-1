@@ -1,0 +1,12 @@
+.payment-method {
+    background: $bg--secondary;
+    border-radius: .6rem;
+    height: 7.5rem;
+    cursor: pointer;
+
+    &__icon--duo {
+        display: grid;
+        grid-template-columns: repeat(2, 2.5rem);
+        grid-gap: 1rem;
+    }
+}

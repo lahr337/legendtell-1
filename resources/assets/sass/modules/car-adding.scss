@@ -1,0 +1,45 @@
+.car-adding {
+    background: $bg--secondary;
+    border-radius: .8rem;
+    padding: 3rem 2rem;
+
+    &__by-win, &__or, &__by-license-and-state, &__btn {
+        margin-top: 2rem;
+    }
+
+    &__or {
+        display: inline-block;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $text--pitchDark;
+    }
+
+    &__field:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+    }
+
+    &__close {
+        display: none;
+    }
+}
+
+@include media-1199 {
+    .car-adding {
+        &__close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            padding: 0;
+            border: none;
+            outline: none;
+            background: transparent;
+            cursor: pointer;
+            display: block;
+        }
+    }
+}

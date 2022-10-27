@@ -1,0 +1,21 @@
+@import "utils/main";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+@import "./general-modules/block-heading.scss";
+
+@import "./modules/nav-tabs-item.scss";
+@import "./modules/nav-tabs.scss";
+@import "./modules/toggle.scss";
+@import "./modules/contact-us-block.scss";
+@import "./modules/start-live-chart.scss";
+@import "./modules/chat-header.scss";
+@import "./modules/chat-body.scss";
+@import "./modules/chat-messages.scss";
+@import "./modules/chat-message-field.scss";
+@import "./modules/chat.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/help/faq.scss";

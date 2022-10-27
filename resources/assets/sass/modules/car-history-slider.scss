@@ -1,0 +1,105 @@
+.car-history-slider {
+    overflow: visible;
+
+    &:after {
+        @include pseudo;
+        left: -7.5rem;
+        @include push--middle;
+        height: 1rem;
+        width: calc(100% + 15rem);
+        background: #F5F5F5;
+    }
+
+    &__wrapper {
+        margin: auto;
+        align-items: center;
+        overflow: visible;
+        // width: calc(100% - 15rem);
+    }
+
+    &__slide {
+        height: auto;
+
+        &::before {
+            @include pseudo;
+            top: 0;
+            left: 3.5rem;
+            height: 50% !important;
+            width: 0.1rem;
+            height: 100%;
+            background: #F5F5F5;
+        }
+
+        &:nth-child(2n) {
+            .car-history-slider__slider-inner {
+                padding-bottom: 0;
+                padding-top: 100%;
+            }
+
+            &::before {
+                top: auto;
+                bottom: 0;
+            }
+        }
+    }
+
+    &__slider-inner {
+        position: relative;
+        padding-bottom: 100%;
+        z-index: z('content');
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        @include push--middle;
+        z-index: z('content');
+
+        &--prev {
+            left: -7.5rem;
+        }
+
+        &--next {
+            right: -7.5rem;
+        }
+    }
+}
+
+@include media-575 {
+    .car-history-slider {
+        &__wrapper {
+            align-items: flex-start;
+        }
+
+        &__slider-inner {
+            padding-bottom: 0;
+        }
+
+        &__slide {    
+            &:nth-child(2n) {
+                .car-history-slider__slider-inner {
+                    padding-bottom: 0;
+                    padding-top: 0;
+                }
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+    
+        &::after {
+            display: none;
+        }
+
+        &__arrow {
+            &--prev {
+                left: 0;
+            }
+
+            &--next {
+                right: 0;
+            }
+        }
+    }
+}

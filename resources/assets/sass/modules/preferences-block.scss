@@ -1,0 +1,122 @@
+.preferences-block {
+    // Checks
+    &__hiding-checks {
+        display: flex;
+        // height: 3.2rem;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition--general;
+    }
+
+    &__hiding-checks-inner {
+        display: flex;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #F6F6F6;
+    }
+
+    &__check {
+        &:not(:first-child):not(:last-child) {
+            margin: 0 0.7rem;
+        }
+
+        &:first-child {
+            margin-right: 0.7rem;
+        }
+
+        &:last-child {
+            margin-left: 0.7rem;
+        }
+    }
+    // End checks
+
+    // Control
+    &__control {
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__links {
+        margin-left: 7rem;
+    }
+
+    &__link-item {
+        &:first-child {
+            margin-right: 1rem;
+        }
+
+        &:last-child {
+            margin-left: 1rem;
+        }
+    }
+
+    &__hiding-btn svg {
+        transition: $transition--general;
+        transform: rotate(180deg);
+    }
+    // End Control
+}
+
+.preferences-block--open {
+    .preferences-block {
+        &__hiding-checks {
+            max-height: 3.2rem;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &__hiding-btn svg {
+            transform: rotate(0);
+        }
+    }
+}
+
+@include media-575 {
+    .preferences-block {
+        &__control {
+            display: block;
+        }
+
+        &__links {
+            margin-left: 0;
+            padding-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__link-item {
+            margin-top: 1rem;
+            display: block;
+            
+            &:first-child {
+                margin-right: 0;
+            }
+
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+
+        &__hiding-checks-inner {
+            display: block;
+        }
+
+        &__check:not(:first-child):not(:last-child) {
+            margin: 0.5rem 0;
+        }
+
+        &__check:last-child {
+            margin-left: 0;
+        }
+    }
+
+    .preferences-block--open {
+        .preferences-block {
+            &__hiding-checks {
+                max-height: 7rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import "utils/main";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+
+@import "./general-modules/block-heading.scss";
+@import "./general-modules/list.scss";
+@import "./modules/vin.scss";
+@import "./modules/slider-button.scss";
+@import "./modules/car-general-slider.scss";
+@import "./modules/car-thambs-slider.scss";
+@import "./modules/general-car-props.scss";
+@import "./modules/progress-bar.scss";
+@import "./modules/condition-assessed-item.scss";
+@import "./modules/conditions-assessed.scss";
+@import "./modules/report-table.scss";
+@import "./modules/features-list-block.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/view-appraisal/view-appraisal.scss";

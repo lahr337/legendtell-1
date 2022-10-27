@@ -1,0 +1,66 @@
+.user-nav {
+    background: $bg--general;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    z-index: z('up-content');
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition--general;
+
+    &__list {
+        padding: 0 1rem;
+    }
+
+    &__item {
+        padding: 1rem 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #F5F5F5;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: $text--general;
+        transition: $transition--general;
+    }
+
+    &__icon-wr {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__item-title {
+        margin-left: 1rem;
+        font-weight: 500;
+    }
+
+    &__link:hover {
+        color: $text--primaryAccent;
+    }
+
+    &__bue-reports {
+        margin-top: 1.5rem;
+        display: block;
+        width: 100%;
+    }
+}
+
+.user-nav--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@include media-767 {
+    .user-nav {
+        opacity: 1;
+        visibility: visible;
+    }
+}

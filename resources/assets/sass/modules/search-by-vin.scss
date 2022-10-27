@@ -1,0 +1,125 @@
+.search-by-vin {
+    min-height: 44rem;
+
+    &__desc {
+        margin-top: 2rem;
+
+        span {
+            font-weight: 700;
+            color: $text--primaryAccent;
+        }
+    }
+
+    // Input heading
+    &__input-controls, &__controls-items {
+        display: flex;
+        
+    }
+
+    &__input-controls {
+        margin-top: 2.8rem;
+        align-items: flex-end;
+    }
+
+    &__controls-items {
+        align-items: center;
+        margin-left: 2rem;
+    }
+
+    &__radio {
+        &:not(:first-child):not(:last-child) {
+            margin: 0 0.7rem;
+        }
+
+        &:first-child {
+            margin-right: 0.7rem;
+        }
+
+        &:last-child {
+            margin-left: 0.7rem;
+        }
+    }
+    // End Input heading
+
+    // Search types
+    &__search-type-wr {
+        margin-top: 2rem;
+        width: 57rem;
+    }
+
+    &__search-type {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+
+        &--active {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+        }
+    }
+    // End search types
+
+    // Input
+    &__input-wr {
+        width: 100%;
+    }
+    // End input
+
+    &__preferences {
+        margin-top: 1.5rem;
+    }
+}
+
+.search-by-vin--found {
+    min-height: auto;
+}
+
+@include media-991 {
+    .search-by-vin {
+        min-height: 38rem;
+    }
+
+    .search-by-vin--found {
+        min-height: auto;
+    }
+}
+
+@include media-767 {
+    .search-by-vin {
+        min-height: 33rem;
+
+        &__desc {
+            margin-top: 1rem;
+        }
+
+        &__input-controls {
+            margin-top: 1.5rem;
+        }
+
+        &__search-type-wr {
+            width: 50rem;
+        }
+    }
+
+    .search-by-vin--found {
+        min-height: auto;
+    }
+}
+
+@include media-575 {
+    .search-by-vin {
+        &__search-type-wr {
+            width: 29rem;
+        }
+
+        &__controls-items {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+
+        &__input-controls {
+            display: block;
+        }
+    }
+}

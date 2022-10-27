@@ -1,0 +1,46 @@
+@import "utils/main";
+@import "~billboard.js/dist/billboard.css";
+// @import "/node_modules/billboard.js/dist/plugin/pkgd/"
+
+// Modules---------------
+@import "utils/general-modules.scss";
+
+@import "./general-modules/btn.scss";
+@import "./general-modules/section-heading.scss";
+@import "./general-modules/block-heading.scss";
+@import "./modules/vin.scss";
+@import "./modules/slider-button.scss";
+@import "./modules/car-general-slider.scss";
+@import "./modules/car-thambs-slider.scss";
+@import "./general-modules/list.scss";
+@import "./modules/general-car-props.scss";
+@import "./general-modules/link.scss";
+@import "./modules/appraised-value.scss";
+@import "./modules/window-sticker.scss";
+@import "./modules/progress-bar.scss";
+@import "./modules/condition-assessed-item.scss";
+@import "./modules/venhicle-conditions.scss";
+@import "./modules/venhicle-chart-info.scss";
+@import "./modules/venhicle-chart.scss";
+
+@import "./modules/car-advantage-item.scss";
+@import "./modules/general-history.scss";
+@import "./modules/general-history-header.scss";
+@import "./modules/car-history-item.scss";
+@import "./modules/car-history-slider.scss";
+@import "./modules/toggle.scss";
+@import "./modules/detailed-history-block.scss";
+@import "./modules/visual-demage.scss";
+@import "./modules/play-video.scss";
+
+// @import "./modules/ge/"
+@import "./modules/accident-reported.scss";
+@import "./modules/stage.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/venhicle/venhicle-general-info.scss";
+@import "./sections/venhicle/car-advantages.scss";
+@import "./sections/venhicle/venhicle-status.scss";
+@import "./sections/venhicle/car-histroty.scss";

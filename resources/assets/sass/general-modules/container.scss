@@ -1,0 +1,48 @@
+$container--xxl_width: 1200px !default;
+$container--xxl_padding: 0 15px;
+
+.container {
+    width: 100%;
+    max-width: $container--xxl_width;
+    padding: $container--xxl_padding;
+    margin: auto;
+    font-size: 1.4rem;
+}
+
+.container--page {
+    padding: 5rem 15px 5rem 15px;
+}
+
+@include media-1399 {
+    .container {
+        max-width: 1100px;
+    }
+}
+
+@include media-1199 {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@include media-991 {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@include media-767 {
+    .container {
+        max-width: 540px;
+    }
+
+    .container--page {
+        padding: 3rem 15px 3rem 15px;
+    }
+}
+
+@include media-575 {
+    .container {
+        max-width: 100%;
+    }
+}

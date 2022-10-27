@@ -1,0 +1,37 @@
+.main-car-img {
+    position: relative;
+    min-height: 375px;
+    
+    &__picture {
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        width: 525px;
+        height: auto;
+        z-index: z('content');
+        max-width: initial;
+    }
+
+    // Circles
+    &::before, &::after {
+        @include pseudo;
+        border-radius: 50%;
+    }
+
+    &::before {
+        width: 583px;
+        height: 583px;
+        background: rgba(0, 146, 243, 0.35);
+        left: 0;
+        bottom: 40px;
+    }
+
+    &::after {
+        width: 615px;
+        height: 615px;
+        bottom: 0;
+        left: 155px;
+        background: #40B3FF;
+    }
+    // End circles
+}

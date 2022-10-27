@@ -1,0 +1,44 @@
+.dashboard-car {
+    background: $bg--secondary;
+    border-radius: .6rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+
+    &__img-wr {
+        width: 8rem;
+        height: 6rem;
+        border-radius: .4rem;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+        margin-left: 1.5rem;
+    }
+
+    &__name {
+        font-size: 1.4rem;
+    }
+
+    &__miled-wr {
+        margin-top: 0.5rem;
+    }
+
+    &__miles {
+        font-size: 14px;
+        color: $text--primaryAccent;
+        font-weight: 500;
+    }
+
+    &__edit {
+        margin-left: 5px;
+        font-size: 1.2rem;
+        text-decoration: underline;
+    }
+}

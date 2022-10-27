@@ -1,0 +1,15 @@
+.car-thambs-slider {
+    cursor: grab;
+
+    &__slide {
+        display: flex;
+        border-radius: 6px;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+    }
+
+    &__img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+    }
+}

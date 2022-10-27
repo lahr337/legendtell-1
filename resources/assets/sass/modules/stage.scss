@@ -1,0 +1,118 @@
+.stage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 1.4rem;
+
+
+    // Circles
+    &__circle {
+        position: absolute;
+        @include push--middle;
+        width: 1.4rem;
+        aspect-ratio: 1/1;
+        background: #D7D7D7;
+        border-radius: 50%;
+
+        &::before {
+            @include pseudo;
+            @include push--center-middle;
+            width: 2rem;
+            aspect-ratio: 1/1;
+            background: rgba($bg--accent, .4);
+            border-radius: 50%;
+            opacity: 0;
+            z-index: z('content');
+        }
+
+        &--first {
+            left: 0;
+
+            .stage__circle-name {
+                left: 0;
+            }
+        }
+
+        &--second {
+            @include push--center-middle;
+
+            .stage__circle-name {
+                @include push--center;
+            }
+        }
+
+        &--third {
+            right: 0;
+
+            .stage__circle-name {
+                right: 0;
+            }
+        }
+        // End modifers
+    }
+
+    &__circle-name {
+        display: inline-block;
+        position: absolute;
+        bottom: -2.2rem;
+        font-size: 1.2rem;
+        color: $text--pitchDark;
+    }
+    // End circles
+
+    // Lines
+    &__line {
+        height: .2rem;
+        background: #D7D7D7;
+    }
+    // End lines
+}
+
+.stage--first {
+    .stage {
+        &__circle--first {
+            background: $bg--accent;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.stage--second {
+    .stage {
+        &__circle--first, &__circle--second {
+            background: $bg--accent;
+        }
+
+        &__circle--second {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &__line--first {
+            background: $bg--accent;
+        }
+    }
+}
+
+.stage--third {
+    .stage {
+        &__circle--first, &__circle--second, &__circle--third {
+            background: $bg--accent;
+        }
+
+        &__circle--third {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &__line--first, &__line--second {
+            background: $bg--accent;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.general-car-props {
+    // Heading
+    &__heading {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__accent {
+        margin-left: 1.5rem;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 3.2rem;
+        color: $text--secondaryAccent;
+    }
+    // End heading
+
+    &__props-list {
+        margin-top: 2rem;
+    }
+
+    &__download {
+        margin-top: 3.2rem;
+    }
+}
+
+@include media-767 {
+    .general-car-props {
+        &__props-list {
+            column-count: 2;
+        }
+
+        &__download {
+            margin-top: 2rem;
+        }
+    }
+}
+
+@include media-575 {
+    .general-car-props {
+        &__props-list {
+            column-count: 1;
+        }
+
+        &__accent {
+            margin-left: 0.5rem;
+            font-size: 2.5rem;
+        }
+    }
+}

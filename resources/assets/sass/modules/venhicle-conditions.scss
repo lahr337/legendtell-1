@@ -1,0 +1,24 @@
+.venhicle-conditions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem 3rem;
+    padding-top: 4rem;
+}
+
+@include media-1199 {
+    .venhicle-conditions {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include media-991 {
+    .venhicle-conditions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include media-575 {
+    .venhicle-conditions {
+        grid-template-columns: 1fr;
+    }
+}

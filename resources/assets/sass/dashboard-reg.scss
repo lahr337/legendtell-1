@@ -1,0 +1,120 @@
+@import "utils/main";
+
+$lg-path-fonts: '/assets/fonts/lg';
+$lg-path-images: '/assets/images/lg';
+@import "~lightgallery/scss/lightgallery.scss";
+@import "~lightgallery/scss/lg-zoom.scss";
+@import "~lightgallery/scss/lg-thumbnail.scss";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+@import "./general-modules/block-heading.scss";
+@import "./general-modules/custom-input.scss";
+@import "./general-modules/custom-check.scss";
+@import "./general-modules/custom-radio.scss";
+
+@import "./modules/dashboard-car.scss";
+@import "./modules/dashboard-asside-tab.scss";
+@import "./modules/get-help.scss";
+@import "./modules/metric-item.scss";
+@import "./modules/dashboard-next-location.scss";
+@import "./modules/dashboard-next-item.scss";
+@import "./modules/small-range.scss";
+@import "./modules/dashboard-since-item.scss";
+@import "./modules/dashboard-tabs.scss";
+@import "./modules/odometer-history-item.scss";
+@import "./modules/service-odometer-history.scss";
+@import "./modules/metric-item.scss";
+@import "./modules/empty-media-item.scss";
+@import "./modules/full-media-item.scss";
+@import "./modules/appraisal-checks.scss";
+@import "./modules/modal-step.scss";
+@import "./modules/service-select.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+@import "./sections/dashboard/dashboard-tab.scss";
+@import "./sections/dashboard/service-history.scss";
+@import "./sections/dashboard/repair-costs.scss";
+@import "./sections/dashboard/media.scss";
+@import "./sections/dashboard/appraisal.scss";
+
+.content-tab {
+    display: none;
+
+    &--active {
+        display: inherit;
+    }
+}
+
+.custom-radio {
+    &__field-wr {
+        position: relative;
+    }
+
+    &__field {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0;
+        outline: none;
+        z-index: z('content');
+        cursor: pointer;
+    }
+
+    &__customize {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: .4rem;
+        border: 1px solid $bg--accent;
+        transition: $transition--general;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            opacity: 0;
+            transition: $transition--general;
+        }
+    }
+
+    &__field:checked + .custom-radio__customize {
+        background: $bg--accent;
+
+        svg {
+            opacity: 1;
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+    }
+}
+
+.custom-radio--media {
+    width: 2.7rem;
+    height: 2.7rem;
+
+    .custom-radio {
+        &__customize {
+            background: $bg--general;
+            width: 2.7rem;
+            height: 2.7rem;
+            border-color: $bg--general;
+            border-radius: 50%;
+        }
+
+        &__field:checked + .custom-radio__customize {
+            background: $bg--general;
+
+            svg {
+                opacity: 1;
+            }
+        }
+    }
+}
